@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Enjoy Travelss | Creating Unforgettable Journeys</title>
+  <meta name="description" content="The Enjoy Travelss - Premium travel and tour agency based in Ahmedabad. Crafting unforgettable luxury journeys worldwide.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body class="loading">
+
+  <!-- Intro Loader -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">The Enjoy <span>Travelss</span></div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Slide-in Menu -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <ul class="mobile-nav-links">
+      <li><a href="#destinations" class="mobile-link">Destinations</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#story" class="mobile-link">Our Story</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <button class="btn-gold mobile-link" onclick="document.getElementById('mobile-menu').classList.remove('active'); window.location.href='#contact'">Start Journey</button>
+  </div>
+
+  <!-- Floating Navbar -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        The Enjoy <span>Travelss</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#contact" class="btn-gold">Start Journey</a>
+      </div>
+      <button class="hamburger" id="menu-toggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-bg-container">
+      <img src="assets/luxury_travel_hero.png" alt="Luxury Travel Background" class="hero-bg-image" onerror="this.src='assets/thailand_tour.png'">
+      <div class="hero-overlay"></div>
+    </div>
+    <canvas id="particles-canvas"></canvas>
+    
+    <div class="hero-content">
+      <span class="hero-subtitle">Bespoke Expeditions</span>
+      <h1 class="hero-title">Creating <span>Unforgettable</span> Journeys</h1>
+      <p class="hero-tagline">Curated travel experiences for those who refuse the ordinary. Based in Ahmedabad, exploring the world with sophistication and ease.</p>
+      <div class="hero-buttons">
+        <a href="#destinations" class="btn-gold">Explore Journeys <i class="bx bx-right-arrow-alt"></i></a>
+        <a href="#contact" class="btn-outline-gold">Inquire Now</a>
+      </div>
+    </div>
+
+    <!-- Luxury Scrolling Marquee -->
+    <div class="luxury-marquee">
+      <div class="marquee-content">
+        <div class="marquee-item"><i class="bx bxs-star"></i> Luxury Escapes</div>
+        <div class="marquee-item"><i class="bx bxs-star"></i> Creating Unforgettable Journeys</div>
+        <div class="marquee-item"><i class="bx bxs-star"></i> Bespoke Travel</div>
+        <div class="marquee-item"><i class="bx bxs-star"></i> The Enjoy Travelss</div>
+        <div class="marquee-item"><i class="bx bxs-star"></i> Beyond Ordinary</div>
+        <!-- Duplicate for infinite loop -->
+        <div class="marquee-item"><i class="bx bxs-star"></i> Luxury Escapes</div>
+        <div class="marquee-item"><i class="bx bxs-star"></i> Creating Unforgettable Journeys</div>
+        <div class="marquee-item"><i class="bx bxs-star"></i> Bespoke Travel</div>
+        <div class="marquee-item"><i class="bx bxs-star"></i> The Enjoy Travelss</div>
+        <div class="marquee-item"><i class="bx bxs-star"></i> Beyond Ordinary</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Happy Travelers Gallery -->
+  <section id="gallery" class="reveal-on-scroll">
+    <div class="container">
+      <span class="eyebrow">Visual Stories</span>
+      <h2 class="section-title">Our Happy Travelers</h2>
+      <p class="section-desc">Capturing real moments of awe and excitement from our premium journeys across the globe.</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item row-span-2">
+          <img src="Customer/IMG_4859.JPG.jpeg" alt="Traveler Photo">
+          <div class="gallery-overlay"><span>Kashmir Memories</span></div>
+        </div>
+        <div class="gallery-item col-span-2">
+          <img src="Customer/IMG_5209.JPG.jpeg" alt="Traveler Photo">
+          <div class="gallery-overlay"><span>Bali Sunset</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Customer/IMG_5227.JPG.jpeg" alt="Traveler Photo">
+          <div class="gallery-overlay"><span>Vietnam Adventure</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Customer/IMG_5230.JPG.jpeg" alt="Traveler Photo">
+          <div class="gallery-overlay"><span>Kedarnath Trek</span></div>
+        </div>
+        <div class="gallery-item row-span-2">
+          <img src="Customer/IMG_5730.JPG.jpeg" alt="Traveler Photo">
+          <div class="gallery-overlay"><span>Spiti Valleys</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="Customer/IMG_5744.JPG.jpeg" alt="Traveler Photo">
+          <div class="gallery-overlay"><span>Thailand Retreat</span></div>
+        </div>
+        <div class="gallery-item col-span-2">
+          <img src="Customer/IMG_5745.JPG.jpeg" alt="Traveler Photo">
+          <div class="gallery-overlay"><span>Dubai Luxury</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Destinations Section -->
+  <section id="destinations" class="reveal-on-scroll">
+    <div class="container">
+      <span class="eyebrow">Curated Packages</span>
+      <h2 class="section-title">Exclusive Destinations</h2>
+      
+      <!-- Domestic Carousels -->
+      <div class="carousel-section-header" style="margin-top: 50px;">
+        <div>
+          <span class="eyebrow" style="color: var(--text-muted); font-size: 0.75rem;">Explore India</span>
+          <h3 class="section-title" style="font-size: 2rem; margin-bottom: 0;">Domestic Escapes</h3>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="dom-prev" aria-label="Previous"><i class="bx bx-left-arrow-alt"></i></button>
+          <button class="carousel-btn" id="dom-next" aria-label="Next"><i class="bx bx-right-arrow-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track" id="dom-track">
+            <!-- Kashmir -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/kashmir_tour.png" alt="Kashmir">
+                <div class="card-badge">10 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Kashmir</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹16,999</span></div>
+                  <a href="itinerary.html?dest=kashmir" class="card-btn" aria-label="View Kashmir Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Shimla & Manali -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/himachal_tour_1774773293833.png" alt="Shimla & Manali">
+                <div class="card-badge">11 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Shimla & Manali</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹11,899</span></div>
+                  <a href="itinerary.html?dest=shimla_manali" class="card-btn" aria-label="View Shimla Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Goa -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/goa_tour.png" alt="Goa">
+                <div class="card-badge">5 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Goa</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹14,808</span></div>
+                  <a href="itinerary.html?dest=goa" class="card-btn" aria-label="View Goa Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Rajasthan -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/rajasthan_tour_1774773276497.png" alt="Rajasthan">
+                <div class="card-badge">7 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Rajasthan</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹5,000</span></div>
+                  <a href="itinerary.html?dest=rajasthan" class="card-btn" aria-label="View Rajasthan Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Kedarnath -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/kedarnath_tour.png" alt="Kedarnath">
+                <div class="card-badge">6 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Kedarnath</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹11,499</span></div>
+                  <a href="itinerary.html?dest=kedarnath" class="card-btn" aria-label="View Kedarnath Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Spiti Valley -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/spiti_tour.png" alt="Spiti Valley">
+                <div class="card-badge">10 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Spiti Valley</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹20,500</span></div>
+                  <a href="itinerary.html?dest=spiti" class="card-btn" aria-label="View Spiti Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Zanskar Valley -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/zanskar_tour.png" alt="Zanskar Valley">
+                <div class="card-badge">7 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Zanskar Valley</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹22,799</span></div>
+                  <a href="itinerary.html?dest=zanskar" class="card-btn" aria-label="View Zanskar Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots" id="dom-dots"></div>
+      </div>
+
+      <!-- International Carousels -->
+      <div class="carousel-section-header" style="margin-top: 80px;">
+        <div>
+          <span class="eyebrow" style="color: var(--text-muted); font-size: 0.75rem;">Explore The World</span>
+          <h3 class="section-title" style="font-size: 2rem; margin-bottom: 0;">International Escapes</h3>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="intl-prev" aria-label="Previous"><i class="bx bx-left-arrow-alt"></i></button>
+          <button class="carousel-btn" id="intl-next" aria-label="Next"><i class="bx bx-right-arrow-alt"></i></button>
+        </div>
+      </div>
+
+      <div class="carousel-container">
+        <div class="carousel-track-wrapper">
+          <div class="carousel-track" id="intl-track">
+            <!-- Dubai -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/dubai_tour.png" alt="Dubai">
+                <div class="card-badge">9 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Dubai</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹27,999</span></div>
+                  <a href="itinerary.html?dest=dubai" class="card-btn" aria-label="View Dubai Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Vietnam -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/vietnam_tour_1774773258603.png" alt="Vietnam">
+                <div class="card-badge">6 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Vietnam (6D/5N)</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹1,24,999</span></div>
+                  <a href="itinerary.html?dest=vietnam" class="card-btn" aria-label="View Vietnam Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Bali -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/bali_tour.png" alt="Bali">
+                <div class="card-badge">7 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Bali</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹35,000</span></div>
+                  <a href="itinerary.html?dest=bali" class="card-btn" aria-label="View Bali Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Thailand -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="assets/thailand_tour.png" alt="Thailand">
+                <div class="card-badge">9 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Thailand</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹32,110</span></div>
+                  <a href="itinerary.html?dest=thailand" class="card-btn" aria-label="View Thailand Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Phuket - Krabi -->
+            <div class="destination-card">
+              <div class="card-image-box">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80" alt="Phuket - Krabi">
+                <div class="card-badge">7 Days</div>
+              </div>
+              <div class="card-info">
+                <h4 class="card-title">Phuket - Krabi</h4>
+                <div class="card-details">
+                  <div class="card-price">From <span>₹46,503</span></div>
+                  <a href="itinerary.html?dest=phuket-krabi" class="card-btn" aria-label="View Phuket Itinerary"><i class="bx bx-arrow-back"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-dots" id="intl-dots"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Bento Services Section -->
+  <section id="services" class="reveal-on-scroll">
+    <div class="container">
+      <span class="eyebrow">Our Ecosystem</span>
+      <h2 class="section-title">Refined Stays & Services</h2>
+      <p class="section-desc">We offer everything required for a flawless journey, seamlessly integrated into your itinerary.</p>
+      
+      <div class="bento-grid">
+        <!-- Curated Tours (Large item) -->
+        <div class="bento-item col-span-2 row-span-2" style="background-image: linear-gradient(to top, rgba(5,10,21,0.9), rgba(5,10,21,0.2)), url('assets/thailand_tour.png'); background-size: cover; background-position: center; border: none;">
+          <div class="bento-content">
+            <div class="bento-icon-box"><i class="bx bx-trip"></i></div>
+            <h3>Curated Luxury Tours</h3>
+            <p>Every itinerary is hand-designed by our regional travel directors to balance premium sightseeing with private leisure time.</p>
+          </div>
+        </div>
+        
+        <!-- Premium Stays -->
+        <div class="bento-item">
+          <div class="bento-icon-box"><i class="bx bx-hotel"></i></div>
+          <h3>Premium Stays</h3>
+          <p>Handpicked accommodations from luxury boutique hotels to secluded desert villas.</p>
+        </div>
+        
+        <!-- 30k Happy Travelers (Accented gold box) -->
+        <div class="bento-item accent-gold-bg">
+          <div class="bento-stat-number" id="stats-counter" data-target="30000">0</div>
+          <div class="bento-stat-label">Happy Travelers</div>
+        </div>
+        
+        <!-- Expert Guides -->
+        <div class="bento-item">
+          <div class="bento-icon-box"><i class="bx bx-user-voice"></i></div>
+          <h3>Local Destination Experts</h3>
+          <p>First-aid certified, multilingual guides with deep knowledge of local culture.</p>
+        </div>
+        
+        <!-- Bespoke Itineraries -->
+        <div class="bento-item col-span-2" style="flex-direction: row; justify-content: space-between; align-items: center; gap: 30px;">
+          <div style="max-width: 60%;">
+            <h3>Bespoke Custom Trips</h3>
+            <p style="margin-top: 5px;">Tailor-make your own private adventure matching your specific interests and dates.</p>
+          </div>
+          <a href="#contact" class="btn-gold" style="white-space: nowrap;">Plan Yours <i class="bx bx-chevron-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section id="story" class="reveal-on-scroll">
+    <div class="container">
+      <div class="story-split">
+        <div class="story-left">
+          <span class="eyebrow">Our Legacy</span>
+          <h2 class="section-title">Blending Travel With Memories</h2>
+          <p class="section-desc" style="margin-bottom: 25px;">
+            At The Enjoy Travelss, we believe that travel is not about checking places off a map, but about the profound moments that stay with you forever. 
+          </p>
+          <p class="section-desc" style="margin-bottom: 35px;">
+            We focus on creating seamless, stress-free adventures that combine safety, premium service, and real discoveries. Let us take care of all the planning, while you enjoy the journey.
+          </p>
+          <a href="#contact" class="btn-gold">Connect With Us</a>
+        </div>
+        <div class="story-right">
+          <div class="story-image-wrap">
+            <img src="assets/owner.jpg" alt="Nagesh Patel, Founder & CEO">
+            <div class="story-owner-tag">
+              <h3 class="story-owner-name">Nagesh Patel</h3>
+              <p class="story-owner-title">Founder & CEO</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="reveal-on-scroll">
+    <div class="container">
+      <span class="eyebrow">Guest Reviews</span>
+      <h2 class="section-title">What Our Guests Say</h2>
+      <p class="section-desc">Read honest accounts of first-hand experiences from travelers who explored the world with us.</p>
+      
+      <div class="testimonials-grid">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <div class="rating-stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Well maintained camp sites on the tour. The tents were clean and food quality was top-notch. Highly recommend their domestic expeditions!"
+          </p>
+          <h4 class="testimonial-author">Vaibhav Solanki</h4>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <div class="rating-stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <p class="testimonial-text">
+            "Unbelievable experience! The local guides knew all the hidden spots and safety was always a priority. Will book my next trip with them."
+          </p>
+          <h4 class="testimonial-author">Pujara Roshan DR</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Companies -->
+  <section id="partners">
+    <div class="container" style="text-align: center; margin-bottom: 50px;">
+      <span class="eyebrow">Collaborative Associations</span>
+      <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 15px;">Our Trusted Partner Companies</h2>
+      <p class="section-desc" style="margin: 0 auto; max-width: 600px;">To ensure maximum safety, comfortable stays, and seamless logistics, we partner with premier regional travel operators and service groups around the globe.</p>
+    </div>
+    <div class="container">
+      <div class="partners-slider">
+        <div class="partners-track">
+          <!-- Sitara Holidays -->
+          <div class="partner-item">
+            <img src="Logos/sitara_holidays.jpeg" alt="Sitara Holidays">
+          </div>
+          <!-- Trio Holiday -->
+          <div class="partner-item">
+            <img src="Logos/trio_holiday.jpeg" alt="Trio Holiday">
+          </div>
+          <!-- Star Holidays -->
+          <div class="partner-item">
+            <img src="Logos/star_holidays.png" alt="Star Holidays" onerror="this.src='Logos/STAR HOLIDAY LOGO.png'">
+          </div>
+          <!-- Sathi Holiday -->
+          <div class="partner-item">
+            <img src="Logos/sathi_holiday.jpeg" alt="Sathi Holiday">
+          </div>
+          <!-- Thrillingo -->
+          <div class="partner-item">
+            <img src="Logos/thrillingo_logo.jpeg" alt="Thrillingo">
+          </div>
+          
+          <!-- Duplicate for loop -->
+          <!-- Sitara Holidays -->
+          <div class="partner-item">
+            <img src="Logos/sitara_holidays.jpeg" alt="Sitara Holidays">
+          </div>
+          <!-- Trio Holiday -->
+          <div class="partner-item">
+            <img src="Logos/trio_holiday.jpeg" alt="Trio Holiday">
+          </div>
+          <!-- Star Holidays -->
+          <div class="partner-item">
+            <img src="Logos/star_holidays.png" alt="Star Holidays" onerror="this.src='Logos/STAR HOLIDAY LOGO.png'">
+          </div>
+          <!-- Sathi Holiday -->
+          <div class="partner-item">
+            <img src="Logos/sathi_holiday.jpeg" alt="Sathi Holiday">
+          </div>
+          <!-- Thrillingo -->
+          <div class="partner-item">
+            <img src="Logos/thrillingo_logo.jpeg" alt="Thrillingo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inquiry / Contact Section -->
+  <section id="contact" class="reveal-on-scroll">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-info-panel">
+          <div>
+            <span class="eyebrow" style="margin-bottom: 5px;">Get In Touch</span>
+            <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 20px;">Start Your Journey</h2>
+            <p style="color: var(--text-muted); line-height: 1.5;">Have questions or want to request a custom quote? Drop us a message, and our travel coordinators will get back to you shortly.</p>
+            
+            <ul class="contact-details-list">
+              <li class="contact-detail-item">
+                <i class="bx bx-map"></i>
+                <div>
+                  <h4>Office Address</h4>
+                  <p>Ahmedabad, Gujarat, India</p>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <i class="bx bx-phone"></i>
+                <div>
+                  <h4>Call / WhatsApp</h4>
+                  <p>+91 9722283135</p>
+                </div>
+              </li>
+              <li class="contact-detail-item">
+                <i class="bx bx-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>theenjoytravels96@gmail.com</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="contact-socials">
+            <a href="https://instagram.com/the_enjoyy_travelss" target="_blank" class="social-btn" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="https://wa.me/919722283135" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="contact-form-panel">
+          <form class="minimal-form" onsubmit="handleInquiry(event)">
+            <div class="form-group">
+              <input type="text" id="form-name" required placeholder=" ">
+              <label for="form-name">What's your name?</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="form-contact" required placeholder=" ">
+              <label for="form-contact">Your Phone or Email?</label>
+            </div>
+            <div class="form-group">
+              <select id="form-escape" required>
+                <option value="" disabled selected hidden></option>
+                <option value="Domestic Thrill">Domestic Escape</option>
+                <option value="International Scape">International Escape</option>
+                <option value="Custom Bespoke Trip">Custom Bespoke Trip</option>
+              </select>
+              <label for="form-escape">Choice of Escape</label>
+            </div>
+            <button type="submit" class="btn-gold" style="align-self: flex-start; padding: 15px 35px;">
+              Send Inquiry <i class="bx bx-send"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        The Enjoy <span>Travelss</span>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 The Enjoy Travelss. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
+    function handleInquiry(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value;
+      const contact = document.getElementById('form-contact').value;
+      const escape = document.getElementById('form-escape').value;
+      
+      const message = `Hello! I would like to inquire about a trip with The Enjoy Travelss.\n\n` +
+                      `Name: ${name}\n` +
+                      `Contact: ${contact}\n` +
+                      `Interest: ${escape}`;
+      
+      const whatsappUrl = `https://wa.me/919722283135?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+</body>
+</html>

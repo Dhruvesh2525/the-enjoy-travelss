@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Enjoy Travelss | Destination Itinerary</title>
+  <meta name="description" content="Detailed itinerary for your upcoming holiday packages with The Enjoy Travelss.">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  
+  <style>
+    body {
+      background-color: var(--bg-primary);
+    }
+    
+    #itinerary-hero {
+      padding: 140px 0 60px 0;
+      background: linear-gradient(to bottom, rgba(5,10,21,0.7) 0%, rgba(5,10,21,1) 100%), 
+                  url('assets/luxury_travel_hero.png') center/cover no-repeat;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    #itinerary-content-section {
+      padding: 80px 0 120px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Navbar -->
+  <header id="navbar" class="scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        The Enjoy <span>Travelss</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#destinations">Destinations</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#story">Our Story</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="index.html#contact" class="btn-gold">Start Journey</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="itinerary-hero">
+    <div class="container">
+      <a href="index.html#destinations" class="itinerary-back-btn"><i class="bx bx-left-arrow-alt"></i> Back to Destinations</a>
+      <span class="eyebrow">Detailed Itinerary</span>
+      <h1 class="section-title" id="dest-title" style="margin-bottom: 10px;">Loading...</h1>
+      <p id="dest-price-subtitle" class="eyebrow" style="color: var(--text-muted); text-transform: none; letter-spacing: 1px; font-size: 1.1rem; margin-bottom: 0;"></p>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <section id="itinerary-content-section">
+    <div class="container itinerary-container">
+      
+      <!-- Itinerary Content Column -->
+      <div class="itinerary-main">
+        <div id="content-area">
+          <!-- Spinner while loading -->
+          <div style="display: flex; justify-content: center; padding: 50px 0;">
+            <i class="bx bx-loader-alt bx-spin" style="font-size: 2.5rem; color: var(--accent-gold);"></i>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Itinerary Sticky Sidebar Ticket -->
+      <div class="itinerary-sidebar">
+        <div class="sidebar-box">
+          <span class="sidebar-price-label">Exotic Escapes</span>
+          <div class="sidebar-price-value" id="dest-price-sidebar">-</div>
+          
+          <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin-bottom: 25px;">
+            Book this premium curated tour today. Connect directly with our travel designers on WhatsApp to lock in these rates.
+          </p>
+          
+          <a id="book-whatsapp-btn" href="https://wa.me/919722283135" target="_blank" class="btn-gold" style="width: 100%; justify-content: center;">
+            Book Trip <i class="bx bxl-whatsapp" style="font-size: 1.3rem;"></i>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-logo">
+        The Enjoy <span>Travelss</span>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 The Enjoy Travelss. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const destinations = {
+      'dubai': { title: 'Dubai', price: 'From ₹27,999', type: 'pdf', file: 'assets/pdfs/dubai.pdf', pages: 9 },
+      'vietnam': { title: 'Vietnam (6D/5N)', price: 'From ₹124,999', type: 'pdf', file: 'assets/pdfs/vietnam.pdf', pages: 6 },
+      'bali': { 
+        title: 'Bali Adventure', 
+        price: 'From ₹35,000', 
+        type: 'text',
+        content: `
+          <div class="text-itinerary-card">
+            <h3 class="day-title" style="font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 25px;">Trip Overview</h3>
+            <p style="margin-bottom: 10px;"><strong>Duration:</strong> 6 Nights / 7 Days</p>
+            <p style="margin-bottom: 25px;"><strong>Package:</strong> Ultimate Bali & Nusa Penida Adventure</p>
+            
+            <h3 class="day-title" style="font-size: 1.5rem; margin-top: 30px; margin-bottom: 20px; color: var(--accent-gold);">Day-wise Itinerary</h3>
+            
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 1: Arrival in Bali</h4>
+              <p class="day-desc">Arrival in Bali (Denpasar). Meet our private representative and transfer to your luxury resort. Enjoy the rest of the day at your leisure, exploring the surrounding beaches or relaxing by the pool.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 2: Benoa Water Sports & Uluwatu Sunset</h4>
+              <p class="day-desc">Experience thrilling water activities at Tanjung Benoa (Banana Boat ride, Parasailing, and Jet Ski included). In the afternoon, visit the dramatic Uluwatu Cliff Temple and witness the iconic Kecak and Fire Dance against a gorgeous ocean sunset.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 3: Sacred Temples & Git Git Waterfall</h4>
+              <p class="day-desc">Visit the beautiful Ulun Danu Beratan Temple, floating majestically on Lake Beratan. Hike down to the breathtaking Git Git Waterfall. End the day at the famous Tanah Lot Temple to capture a spectacular sunset landscape.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 4: West Nusa Penida Island Tour</h4>
+              <p class="day-desc">Take a scenic speedboat ride to West Nusa Penida. Visit the world-famous Kelingking T-Rex Beach, Angel’s Billabong, and Broken Beach. Swim and snorkel at Toyapakeh reef with colorful marine life.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 5: Ubud Highlands & Kintamani Volcano</h4>
+              <p class="day-desc">Check out and transfer to Ubud. Tour the scenic Kintamani Highlands for panoramas of Mount and Lake Batur. Experience the famous Bali Swing over the lush valleys, stroll through Tegalalang Rice Terraces, and browse Ubud Art Market.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 6: Day of Leisure in Ubud</h4>
+              <p class="day-desc">A full day dedicated to relaxation. Explore Ubud's organic cafés, visit local art galleries, or book a premium Balinese spa treatment.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 7: Departure from Bali</h4>
+              <p class="day-desc">Savor your final Balinese breakfast. Check out and take a private transfer to Denpasar International Airport for your departure flight.</p>
+            </div>
+
+            <h3 class="day-title" style="font-size: 1.4rem; margin-top: 40px; margin-bottom: 15px; color: var(--accent-gold);">✅ Inclusions</h3>
+            <ul style="list-style: none; margin-bottom: 30px; padding-left: 5px;">
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Private air-conditioned vehicle for all transfers</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> English-speaking guide/driver</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Daily gourmet breakfast and mineral water</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Entry tickets & flower welcome garland</li>
+            </ul>
+
+            <h3 class="day-title" style="font-size: 1.4rem; margin-top: 20px; margin-bottom: 15px; color: var(--accent-gold);">❌ Exclusions</h3>
+            <ul style="list-style: none; padding-left: 5px;">
+              <li style="margin-bottom: 10px;"><i class="bx bx-x" style="color: #ef4444; font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Bali Tourism Levy (IDR 150k per traveler)</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-x" style="color: #ef4444; font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Visa on Arrival ($35 USD) & Indian TCS (5%)</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-x" style="color: #ef4444; font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Personal travel insurance and driver tips</li>
+            </ul>
+          </div>
+        `
+      },
+      'thailand': { title: 'Thailand', price: 'From ₹32,110', type: 'pdf', file: 'assets/pdfs/thailand.pdf', pages: 9 },
+      'phuket-krabi': { title: 'Phuket - Krabi (7D/6N)', price: 'From ₹46,503', type: 'pdf', file: 'assets/pdfs/thailand.pdf', pages: 9, imageKey: 'thailand' },
+      'kashmir': { title: 'Kashmir', price: 'From ₹16,999', type: 'pdf', file: 'assets/pdfs/kashmir.pdf', pages: 10 },
+      'shimla_manali': { title: 'Shimla & Manali', price: 'From ₹11,899', type: 'pdf', file: 'assets/pdfs/shimla_manali.pdf', pages: 11 },
+      'goa': { title: 'Goa', price: 'From ₹14,808', type: 'pdf', file: 'assets/pdfs/goa.pdf', pages: 23 },
+      'rajasthan': { title: 'Rajasthan', price: 'From ₹5,000', type: 'pdf', file: 'assets/pdfs/rajasthan.pdf', pages: 7 },
+      'kedarnath': { 
+        title: 'Kedarnath Tour', 
+        price: 'From ₹11,499', 
+        type: 'text',
+        content: `
+          <div class="text-itinerary-card">
+            <h3 class="day-title" style="font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 25px;">Trip Overview</h3>
+            <p style="margin-bottom: 10px;"><strong>Duration:</strong> 6 Days / 5 Nights (From Haridwar)</p>
+            <p style="margin-bottom: 25px;"><strong>Package:</strong> Kedarnath: The Call of Mahadev</p>
+            
+            <h3 class="day-title" style="font-size: 1.5rem; margin-top: 30px; margin-bottom: 20px; color: var(--accent-gold);">Day-wise Itinerary</h3>
+            
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 1: Hometown to Haridwar</h4>
+              <p class="day-desc">Board your comfortable train or bus from your hometown. Rest overnight as we head towards the holy land of Haridwar.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 2: Haridwar Arrival & Ganga Aarti</h4>
+              <p class="day-desc">Check in to your hotel on arrival in Haridwar. Spend the afternoon at leisure. In the evening, attend the legendary, soul-stirring Ganga Aarti at Har Ki Pauri ghats.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 3: Haridwar to Guptkashi</h4>
+              <p class="day-desc">Embark on a scenic drive to Guptkashi. Marvel at the confluence of rivers at Devprayag and Rudraprayag, and pay respects at the ancient Dhari Devi Temple along the Alaknanda river.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 4: The Sacred Kedarnath Trek (16 km)</h4>
+              <p class="day-desc">Drive to Sonprayag/Gaurikund early. Start the sacred 16 km uphill trek to Kedarnath. Feel the spiritual energy as you reach the temple. Attend the evening Aarti, surrounded by snow-clad peaks. Night stay in Kedarnath.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 5: Darshan & Return Trek to Guptkashi</h4>
+              <p class="day-desc">Attend the early morning Abhishek. Visit the Adi Shankaracharya Samadhi and the Bhairavnath Temple. Start the descent back to Gaurikund, then take a private transfer back to your hotel in Guptkashi.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 6: Rishikesh Sightseeing & Return</h4>
+              <p class="day-desc">Drive to Rishikesh. Walk across Ram Jhula and Lakshman Jhula, visit Triveni Ghat, and experience the local spiritual culture. Return to Haridwar for departure.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 7: Check-out & Departure</h4>
+              <p class="day-desc">Check out of the hotel and begin your return journey home with unforgettable spiritual memories of Mahadev.</p>
+            </div>
+
+            <h3 class="day-title" style="font-size: 1.4rem; margin-top: 40px; margin-bottom: 15px; color: var(--accent-gold);">✅ Inclusions</h3>
+            <ul style="list-style: none; margin-bottom: 30px; padding-left: 5px;">
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> 4 Vegetarian Breakfasts & 3 Dinners</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Deluxe sharing rooms (Guptkashi/Haridwar) & Dormitory (Kedarnath)</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> All transport, local permits, and registration fees</li>
+            </ul>
+
+            <h3 class="day-title" style="font-size: 1.4rem; margin-top: 20px; margin-bottom: 15px; color: var(--accent-gold);">❌ Exclusions</h3>
+            <ul style="list-style: none; padding-left: 5px;">
+              <li style="margin-bottom: 10px;"><i class="bx bx-x" style="color: #ef4444; font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Rail/Airfare, personal meals (lunch)</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-x" style="color: #ef4444; font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Pony, palki, or helicopter booking charges</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-x" style="color: #ef4444; font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Personal expenses and porter fees</li>
+            </ul>
+          </div>
+        `
+      },
+      'spiti': { 
+        title: 'Spiti Valley Expedition', 
+        price: 'From ₹20,500', 
+        type: 'text',
+        content: `
+          <div class="text-itinerary-card">
+            <h3 class="day-title" style="font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 25px;">Trip Overview</h3>
+            <p style="margin-bottom: 10px;"><strong>Duration:</strong> 9 Nights / 10 Days</p>
+            <p style="margin-bottom: 25px;"><strong>Package:</strong> Spiti Valley Winter/Summer Adventure</p>
+            
+            <h3 class="day-title" style="font-size: 1.5rem; margin-top: 30px; margin-bottom: 20px; color: var(--accent-gold);">Day-wise Itinerary</h3>
+            
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 0 & 1: Departure to Delhi & Drive to Shimla</h4>
+              <p class="day-desc">Travel to Delhi. Assemble at the departure point for your overnight transport to Shimla. Arrive in Shimla next morning. Enjoy walking through Mall Road in the evening.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 2: Shimla to Sangla Valley</h4>
+              <p class="day-desc">Travel via Narkanda, Rampur, and Sarahan. Enter the majestic Kinnaur region and drive alongside the Baspa river to reach Sangla.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 3: Chitkul Exploration & Kalpa</h4>
+              <p class="day-desc">Drive to Chitkul, the last inhabited village on the Indo-Tibetan border. Spend time exploring the scenic village and riverbanks. Later, drive to Kalpa to witness breathtaking views of the Kinnaur Kailash range.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 4: Kalpa to Tabo Village</h4>
+              <p class="day-desc">Travel alongside the Sutlej river. Stop at Khab, the confluence point of Satluj and Spiti rivers. Visit the beautiful high-altitude Nako Village and reach Tabo by evening.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 5: Tabo Monastery to Kaza</h4>
+              <p class="day-desc">Tour the ancient Tabo Monastery. Hike to the historic Dhankar Monastery perched on a cliff edge. Continue driving to Kaza, the administrative center of Spiti.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 6: Key Monastery & High-Altitude Villages</h4>
+              <p class="day-desc">Visit the spectacular Key Monastery. Drive to Kibber, Langza (famous for fossils), Komic (one of the highest inhabited villages), and Hikkim to mail a postcard from the world's highest post office.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 7: Kaza to Chandratal Lake via Kunzum Pass</h4>
+              <p class="day-desc">Cross the high-altitude Kunzum Pass (15,060 Ft.) to reach the crescent-shaped Chandratal Lake (Moon Lake). Spend the night camping under a star-lit sky.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 8: Chandratal to Manali via Atal Tunnel</h4>
+              <p class="day-desc">Drive back through the rugged Spiti roads, crossing the scenic Rohtang region or Atal Tunnel to arrive at Manali. Enjoy a warm dinner at your hotel.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 9 & 10: Manali Sightseeing & Return to Delhi</h4>
+              <p class="day-desc">Visit local sites in Manali like Hadimba Temple and Old Manali. Board the evening Volvo back to Delhi, arriving on Day 10.</p>
+            </div>
+          </div>
+        `
+      },
+      'zanskar': { 
+        title: 'Zanskar Valley Expedition', 
+        price: 'From ₹22,799', 
+        type: 'text',
+        content: `
+          <div class="text-itinerary-card">
+            <h3 class="day-title" style="font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 25px;">Trip Overview</h3>
+            <p style="margin-bottom: 10px;"><strong>Duration:</strong> 6 Nights / 7 Days</p>
+            <p style="margin-bottom: 25px;"><strong>Package:</strong> Zanskar Valley Adventure</p>
+            
+            <h3 class="day-title" style="font-size: 1.5rem; margin-top: 30px; margin-bottom: 20px; color: var(--accent-gold);">Day-wise Itinerary</h3>
+            
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 1: Arrival in Leh (Acclimatization)</h4>
+              <p class="day-desc">Arrive in Leh. Check in to your hotel. Spend the entire day resting and drinking plenty of water to adapt to the thin high-altitude air.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 2: Leh to Lamayuru</h4>
+              <p class="day-desc">Drive to Lamayuru. On the way, visit Magnetic Hill, Sangam (Indus & Zanskar river confluence), and view the unique crater-like Moonland topography.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 3: Lamayuru to Padum</h4>
+              <p class="day-desc">Begin the journey deep into Zanskar. Cross the high Sirsir La and Singe La passes, descending into the heart of the valley to reach Padum.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 4: Padum Local Sightseeing</h4>
+              <p class="day-desc">Explore the ancient Karsha Monastery, Stongdey Monastery, and the historical Zangla Fort. Learn about the rich Tibetan Buddhist heritage of Zanskar.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 5: Phugtal Monastery Trek</h4>
+              <p class="day-desc">Drive to Purne. Start the trek to the famous Phugtal Monastery, built directly into the side of a massive limestone cliff cave. Return to Purne.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 6: Purne to Jispa via Shinku La</h4>
+              <p class="day-desc">Cross the newly opened Shinku La Pass, enjoying the snow walls. Drive down to Jispa/Keylong in Himachal Pradesh.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 7: Jispa to Manali & Departure</h4>
+              <p class="day-desc">Drive through the Atal Tunnel to Manali, where the tour concludes. Depart for your onward destination.</p>
+            </div>
+            
+            <h3 class="day-title" style="font-size: 1.4rem; margin-top: 40px; margin-bottom: 15px; color: var(--accent-gold);">✅ Inclusions</h3>
+            <ul style="list-style: none; padding-left: 5px;">
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> SUV Transport (Innova or Xylo)</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Daily Breakfast and Dinner</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Inner Line Permits and emergency Oxygen cylinder</li>
+            </ul>
+          </div>
+        `
+      },
+      'hampta': { 
+        title: 'Hampta Pass Trek', 
+        price: 'From ₹6,499', 
+        type: 'text',
+        content: `
+          <div class="text-itinerary-card">
+            <h3 class="day-title" style="font-size: 1.8rem; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 25px;">Trip Overview</h3>
+            <p style="margin-bottom: 10px;"><strong>Duration:</strong> 5 Days / 4 Nights</p>
+            <p style="margin-bottom: 10px;"><strong>Max Altitude:</strong> 14,010 Ft. | <strong>Trek Distance:</strong> 26 km</p>
+            <p style="margin-bottom: 25px;"><strong>Package:</strong> Hampta Pass Trek with Chandratal</p>
+            
+            <h3 class="day-title" style="font-size: 1.5rem; margin-top: 30px; margin-bottom: 20px; color: var(--accent-gold);">Day-wise Itinerary</h3>
+            
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 1: Drive Manali to Jobra, Trek to Chika</h4>
+              <p class="day-desc">Drive to Jobra through pine forests. Start the easy 2-hour trek alongside the Rani Nallah stream to the lush green campsites of Chika.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 2: Chika to Balu ka Ghera</h4>
+              <p class="day-desc">A 5-6 hour moderate trek. Follow the river through flower meadows, crossing streams, and climb up to the sandy flat ground of Balu ka Ghera campsite.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 3: Balu ka Ghera to Siagoru via Hampta Pass</h4>
+              <p class="day-desc">The highlight of the trek (8-9 hours). Climb steeply to Hampta Pass (14,010 Ft.) for incredible views of the Himalayas. Descend into the dry Lahaul valley to the Siagoru campsite.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 4: Siagoru to Chatru, Drive to Chandratal Lake</h4>
+              <p class="day-desc">Trek 4-5 hours down to Chatru road head. Take a private vehicle to the legendary Chandratal Lake (Moon Lake). Spend time capturing the crystal-clear waters before returning to camp at Chatru.</p>
+            </div>
+
+            <div class="itinerary-day-item">
+              <h4 class="day-title">Day 5: Drive Chatru to Manali</h4>
+              <p class="day-desc">Drive back to Manali via the spectacular engineering marvel, the Atal Tunnel, reaching Manali by afternoon where the trek concludes.</p>
+            </div>
+
+            <h3 class="day-title" style="font-size: 1.4rem; margin-top: 40px; margin-bottom: 15px; color: var(--accent-gold);">✅ Inclusions</h3>
+            <ul style="list-style: none; padding-left: 5px;">
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> High-altitude camping meals (Veg)</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Quality tents, sleeping bags, and mattresses</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Certified Trek Leader and support staff</li>
+              <li style="margin-bottom: 10px;"><i class="bx bx-check" style="color: var(--accent-emerald); font-size: 1.2rem; margin-right: 8px; vertical-align: middle;"></i> Forest fees, permits, and mules for common camp luggage</li>
+            </ul>
+          </div>
+        `
+      }
+    };
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const destId = urlParams.get('dest');
+    
+    const contentArea = document.getElementById('content-area');
+    const titleEl = document.getElementById('dest-title');
+    const priceSubtitleEl = document.getElementById('dest-price-subtitle');
+    const priceSidebarEl = document.getElementById('dest-price-sidebar');
+    const bookBtn = document.getElementById('book-whatsapp-btn');
+
+    if (destId && destinations[destId]) {
+      const dest = destinations[destId];
+      titleEl.innerHTML = dest.title;
+      priceSubtitleEl.innerHTML = dest.price;
+      priceSidebarEl.innerHTML = dest.price;
+      
+      const whatsappMsg = `Hello! I would like to book the ${encodeURIComponent(dest.title)} package with The Enjoy Travelss. Please share availability and details.`;
+      bookBtn.href = `https://wa.me/919722283135?text=${whatsappMsg}`;
+      
+      if (dest.type === 'pdf') {
+        let mobileImagesHtml = '';
+        const imgKey = dest.imageKey || destId;
+        
+        if (dest.pages) {
+          for (let i = 0; i < dest.pages; i++) {
+            mobileImagesHtml += `<img class="pdf-page-img" src="assets/pdf-pages/${imgKey}_page_${i}.png" alt="${dest.title} Page ${i+1}" loading="lazy">`;
+          }
+        }
+        
+        contentArea.innerHTML = `
+          <div class="pdf-viewer-container">
+            <iframe src="${dest.file}#toolbar=0&navpanes=0&scrollbar=0&view=FitH" title="${dest.title} Itinerary"></iframe>
+          </div>
+          <div class="pdf-mobile-fallback">
+            ${mobileImagesHtml}
+            <div class="pdf-download-link" style="display: block; text-align: center; margin-top: 25px;">
+              <a href="${dest.file}" class="btn-outline-gold" target="_blank"><i class="bx bxs-file-pdf"></i> View Original PDF Itinerary</a>
+            </div>
+          </div>
+        `;
+      } else if (dest.type === 'text') {
+        contentArea.innerHTML = dest.content;
+      }
+    } else {
+      titleEl.innerHTML = "Package Not Found";
+      priceSubtitleEl.innerHTML = "Unknown Destination";
+      priceSidebarEl.innerHTML = "-";
+      contentArea.innerHTML = `
+        <div class="text-itinerary-card" style="text-align: center; padding: 60px 20px;">
+          <i class="bx bx-error-circle" style="font-size: 4rem; color: var(--accent-gold); margin-bottom: 20px;"></i>
+          <h3 style="margin-bottom: 10px;">Package Not Found</h3>
+          <p style="color: var(--text-muted); margin-bottom: 30px;">We were unable to locate the details for this destination package. Please return to the homepage to browse our packages.</p>
+          <a href="index.html#destinations" class="btn-gold">View All Destinations</a>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
